@@ -1,0 +1,10 @@
+import cv2
+color_img=cv2.imread("E:/exam/col.jpg")
+ycrcb_img=cv2.cvtColor(color_img, cv2.COLOR_BGR2YCrCb)
+y_ch,cr_ch,cb_ch=cv2.split(ycrcb_img)
+cv2.imshow("Ycrcb",ycrcb_img)
+cv2.imshow("Y", y_ch)
+cv2.imshow("cr",cr_ch)
+cv2.imshow("cb",cb_ch)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

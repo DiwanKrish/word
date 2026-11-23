@@ -1,0 +1,10 @@
+import cv2
+color_img=cv2.imread("E:/exam/col.jpg")
+hsv_img=cv2.cvtColor(color_img, cv2.COLOR_BGR2HSV)
+h_ch,s_ch,v_ch=cv2.split(hsv_img)
+cv2.imshow("HSV",hsv_img)
+cv2.imshow("H", h_ch)
+cv2.imshow("S",s_ch)
+cv2.imshow("V",v_ch)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
